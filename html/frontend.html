@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta name:"viewport" content:"width=device-width , initial-scale=1.0">
+        <title>KUBERNETES</title>
+	<link rel="stylesheet" href = "taskdemo.css">
+       <!-- <canvas id=d> -->
+    </head>
+ 
+    <body>
+	   <h1 class="text-light"></h1>
+
+	<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+		<a href="https://codepen-api-export-production.s3.us-west-2.amazonaws.com/zip/PEN/pyBNzX/1578778289271/pure-css-gradient-background-animation.zip" class="d-block btn btn-outline-light" download><i class="fas fa-file-download mr-2"></i></a>
+		<a href="https://manuelpinto.in" target="_blank" class="d-block btn btn-outline-light"><i class="fas fa-external-link-square-alt ml-2"></i></a>
+        </div>
+
+	   <h6 class="text-light small font-weight-bold"><i class="fas fa-code"></i> <i class="fas fa-heart"></i></h6>
+
+        <div>
+		<img src="kub2.jpg" alt="kubernetes" class="center">
+		<p id=A> KUBERNETES COMMANDS </p> 
+	</div>
+      
+	<script>
+		function kube() {
+		var req = document.getElementById("req").value
+		var pod_name = document.getElementById("pod").value
+		var deployment_name = document.getElementById("deployment").value
+		var port_no = document.getElementById("port").value
+		var image_name = document.getElementById("image").value
+		var replica_no = document.getElementById("replica").value	
+		var xhr = new XMLHttpRequest();
+
+		xhr.open("POST", "http://10.0.2.15/cgi-bin/backend.py?ch=" + req + "&dname=" + deployment_name +  "&pname=" + pod_name "&port=" + port_no + "&image=" + image_name + "&rno=" + replica_no ,true);
+		xhr.send();
+
+		xhr.onload = function() {
+		    var output = xhr.responseText;
+		    document.getElementById("out").innerHTML = output;
+		    }
+		}
+	</script>
+        <div class="container">
+		
+          	  <form action="http://10.0.2.15/cgi-bin/backend.py" method="POST">
+        
+            		<input id="req"  type="text"  placeholder="Enter your requirements"  name="ch" size="70" >
+	    		<br>
+	    		<br>
+
+	   		<input id="pod" text-align="center" display="inline" type="text" Placeholder="Enter Pod Name" name="pname" size="70">
+	    		<br> 
+	   		<br>
+	    
+	    		<input id="deployment" type="text" Placeholder="Enter deployment Name" name="dname" size="70">
+	    		<br>
+                	<br>
+	    
+	    		<input id="port" type="text" Placeholder="Enter Port Number" name="port" size="70">
+	        	<br>
+	        	<br>
+	     
+	        	<input id="image" type="text" Placeholder="Enter Image Name" name="image" size="70">
+	      	        <br>
+	     	        <br>
+	      
+	       	        <input id="replica" type="text" Placeholder="Enter Replica Number" name="rno" size="70">
+	     	        <br>
+	        	<br>
+              
+	       		 <button id="B" onmouseover="kube()" type="submit">Display</button> 
+                </form>
+            
+            <br>
+            <br>
+       </div>
+       
+   </body>
+          
+</html>
