@@ -1,0 +1,78 @@
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+          #req {
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 55px;
+                text-align:center;
+		            margin-left: 50px;
+                margin-right: 70px;
+                color: #F08080;
+                padding: 12px 20px;
+                border-radius: 25px 25px;
+	   }
+
+         #pod , #deployment , #port , #image , #replica{
+                
+                margin-left: 600px;
+                color: #7D0552;
+                font-family: serif;
+                font-size: 25px;
+                text-align: center;
+                padding: 12px 20px;
+                border-radius: 12px 12px;
+                background-color: #f2f2f2;
+
+          } 
+            
+        	#A{
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 55px;
+                text-align:center;
+		            margin-left: 50px;
+                margin-right: 70px;
+                padding: 12px 20px;
+                color: #0000cc;
+}
+
+
+        	#B{
+                color: pink;
+                text-align: center;
+                font-size: 55px;
+                font-family: fantasy;
+                border-radius: 30px;
+                padding: 8px;
+                margin-left : 1050px;
+                border-left: 12px solid rgb(27, 26, 26);
+                border-right: 12px solid rgb(27, 26, 26);
+                border-radius: 12px 12px;
+                
+	    }
+
+
+           
+            
+
+
